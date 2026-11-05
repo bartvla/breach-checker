@@ -1,0 +1,5 @@
+FROM nginx:alpine
+LABEL autor="Bartosz Prosianowski" data="2026-10-14" maintainer="Bartosz Prosianowski"
+COPY . /usr/share/nginx/
+RUN date > /usr/share/nginx/html/build.txt
+EXPOSE 80
