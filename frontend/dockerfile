@@ -1,5 +1,6 @@
 FROM nginx:alpine
 LABEL autor="Bartosz Prosianowski" data="2026-10-14" maintainer="Bartosz Prosianowski"
-COPY . /usr/share/nginx/html/
+COPY index.html style.css script.js /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN date > /usr/share/nginx/html/build.txt
 EXPOSE 80
